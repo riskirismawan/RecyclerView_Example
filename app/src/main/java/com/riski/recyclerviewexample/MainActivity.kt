@@ -1,8 +1,10 @@
 package com.riski.recyclerviewexample
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.riski.recyclerviewexample.data.Data
+import com.riski.recyclerviewexample.data.MovieData
 import com.riski.recyclerviewexample.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -19,10 +21,7 @@ class MainActivity : AppCompatActivity() {
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
         binding.recyclerView.adapter = adapter
 
-        val data = arrayListOf<Int>()
-        for (i in 1..20) {
-            data.add(i)
-        }
+        val data = Data.generateDummyMovies() as ArrayList<MovieData>
 
         adapter.setItems(data)
     }
