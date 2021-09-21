@@ -1,4 +1,4 @@
-package com.riski.recyclerviewexample.data
+package com.riski.recyclerviewexample.data.entity
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
@@ -11,7 +11,5 @@ data class MovieData (
     var date : String,
     var poster : Int,
     val budget: Int? = null,
-    val revenue: Int? = null,
-    val userScore: Double? = null,
-    val original_languange: String?= null
+    val revenue: Int? = null
 ) : Parcelable

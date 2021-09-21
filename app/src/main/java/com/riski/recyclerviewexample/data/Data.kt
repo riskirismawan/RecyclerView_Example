@@ -1,6 +1,7 @@
 package com.riski.recyclerviewexample.data
 
 import com.riski.recyclerviewexample.R
+import com.riski.recyclerviewexample.data.entity.MovieData
 
 object Data {
     fun generateDummyMovies(): List<MovieData> {
@@ -16,8 +17,8 @@ object Data {
                 R.drawable.poster_a_start_is_born,
                 36000000,
                 433888866,
-                7.5,
-                "en"
+//                7.5,
+//                "en"
             )
         )
 
@@ -30,8 +31,8 @@ object Data {
                 R.drawable.poster_alita,
                 170000000,
                 404852543,
-                7.2,
-                "en"
+//                7.2,
+//                "en"
             )
         )
 
@@ -44,8 +45,8 @@ object Data {
                 R.drawable.poster_aquaman,
                 160000000,
                 1148461807,
-                6.9,
-                "en"
+//                6.9,
+//                "en"
             )
         )
 
@@ -58,8 +59,8 @@ object Data {
                 R.drawable.poster_bohemian,
                 52000000,
                 894027543,
-                8.0,
-                "en"
+//                8.0,
+//                "en"
             )
         )
 
@@ -72,8 +73,8 @@ object Data {
                 R.drawable.poster_cold_persuit,
                 60000000,
                 76419755,
-                5.7,
-                "en"
+//                5.7,
+//                "en"
             )
         )
 
@@ -86,8 +87,8 @@ object Data {
                 R.drawable.poster_creed,
                 50000000,
                 214215889,
-                6.9,
-                "en"
+//                6.9,
+//                "en"
             )
         )
 
@@ -100,8 +101,8 @@ object Data {
                 R.drawable.poster_crimes,
                 200000000,
                 653355901,
-                6.9,
-                "en"
+//                6.9,
+//                "en"
             )
         )
 
@@ -114,8 +115,8 @@ object Data {
                 R.drawable.poster_glass,
                 20000000,
                 246941965,
-                6.7,
-                "en"
+//                6.7,
+//                "en"
             )
         )
 
@@ -128,8 +129,8 @@ object Data {
                 R.drawable.poster_how_to_train,
                 129000000,
                 517526875,
-                7.8,
-                "en"
+//                7.8,
+//                "en"
             )
         )
 
@@ -142,8 +143,8 @@ object Data {
                 R.drawable.poster_infinity_war,
                 300000000,
                 2046239637,
-                8.3,
-                "en"
+//                8.3,
+//                "en"
             )
         )
 
@@ -156,8 +157,8 @@ object Data {
                 R.drawable.poster_marry_queen,
                 25000000,
                 37807625,
-                6.6,
-                "en"
+//                6.6,
+//                "en"
             )
         )
 
@@ -170,8 +171,8 @@ object Data {
                 R.drawable.poster_master_z,
                 null,
                 null,
-                6.0,
-                "en"
+//                6.0,
+//                "en"
             )
         )
 
@@ -184,8 +185,8 @@ object Data {
                 R.drawable.poster_mortal_engines,
                 null,
                 null,
-                6.1,
-                "en"
+//                6.1,
+//                "en"
             )
         )
 
@@ -198,8 +199,8 @@ object Data {
                 R.drawable.poster_overlord,
                 38000000,
                 41657844,
-                6.7,
-                "en"
+//                6.7,
+//                "en"
             )
         )
 
@@ -212,8 +213,8 @@ object Data {
                 R.drawable.poster_ralph,
                 175000000,
                 529221154,
-                7.2,
-                "1h 52m"
+//                7.2,
+//                "1h 52m"
             )
         )
 
@@ -226,8 +227,8 @@ object Data {
                 R.drawable.poster_robin_hood,
                 100000000,
                 86493046,
-                5.9,
-                "en"
+//                5.9,
+//                "en"
             )
         )
 
@@ -240,7 +241,7 @@ object Data {
                 R.drawable.poster_serenity,
                 25000000,
                 14454622,
-                5.4, "en"
+//                5.4, "en"
             )
         )
 
@@ -253,8 +254,8 @@ object Data {
                 R.drawable.poster_spiderman,
                 90000000,
                 375540831,
-                8.4,
-                "en"
+//                8.4,
+//                "en"
             )
         )
 
@@ -267,8 +268,8 @@ object Data {
                 R.drawable.poster_t34,
                 8000000,
                 36220872,
-                6.9,
-                "en"
+//                6.9,
+//                "en"
             )
         )
 

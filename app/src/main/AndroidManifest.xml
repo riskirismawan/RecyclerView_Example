@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.riski.recyclerviewexample">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,11 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RecyclerViewExample">
         <activity
-            android:name=".DetailActivity"
+            android:name="com.riski.recyclerviewexample.ui.detail.DetailActivity"
             android:exported="true"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName="com.riski.recyclerviewexample.ui.home.MainActivity"/>
         <activity
-            android:name=".MainActivity"
+            android:name="com.riski.recyclerviewexample.ui.home.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
