@@ -4,160 +4,294 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
     tools:context=".ui.detail.DetailActivity">
 
-    <ImageView
-        android:id="@+id/img_photo"
-        android:layout_width="200dp"
-        android:layout_height="300dp"
-        android:scaleType="centerCrop"
-        android:contentDescription="poster"
-        tools:srcCompat="@tools:sample/avatars"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/tv_userScore"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:text="User Score"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toEndOf="@id/img_photo"
-        app:layout_constraintEnd_toEndOf="parent"/>
-
-    <TextView
-        android:id="@+id/tv_userScore_value"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:text="User Score Value"
-        android:textColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@id/tv_userScore"
-        app:layout_constraintStart_toEndOf="@id/img_photo"
-        app:layout_constraintEnd_toEndOf="parent"/>
-
-    <TextView
-        android:id="@+id/tv_budget"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        android:text="Budget"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/tv_userScore_value"
-        app:layout_constraintStart_toEndOf="@id/img_photo"
-        app:layout_constraintEnd_toEndOf="parent"/>
-
-    <TextView
-        android:id="@+id/tv_budget_value"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:text="budget value"
-        android:textColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@id/tv_budget"
-        app:layout_constraintStart_toEndOf="@id/img_photo"
-        app:layout_constraintEnd_toEndOf="parent"/>
-
-    <TextView
-        android:id="@+id/tv_revenue"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        android:text="Revenue"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/tv_budget_value"
-        app:layout_constraintStart_toEndOf="@id/img_photo"
-        app:layout_constraintEnd_toEndOf="parent"/>
-
-    <TextView
-        android:id="@+id/tv_revenue_value"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:text="revenue value"
-        android:textColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@id/tv_revenue"
-        app:layout_constraintStart_toEndOf="@id/img_photo"
-        app:layout_constraintEnd_toEndOf="parent"/>
-
-    <TextView
-        android:id="@+id/tv_release_date"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        android:text="Release Date"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/tv_revenue_value"
-        app:layout_constraintStart_toEndOf="@id/img_photo"
-        app:layout_constraintEnd_toEndOf="parent"/>
-
-    <TextView
-        android:id="@+id/tv_date"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:text="release date"
-        android:textColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@id/tv_release_date"
-        app:layout_constraintStart_toEndOf="@id/img_photo"
-        app:layout_constraintEnd_toEndOf="parent"/>
-
-    <TextView
-        android:id="@+id/tv_title"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_img_photo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="title"
-        android:textColor="@color/black"
-        android:textSize="32sp"
-        android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/img_photo"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        android:layout_marginStart="16dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="15dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
-    <ScrollView
-        android:layout_width="match_parent"
+        <ImageView
+            android:id="@+id/img_photo"
+            android:layout_width="200dp"
+            android:layout_height="300dp"
+            android:scaleType="centerCrop"
+            android:contentDescription="poster"
+            tools:srcCompat="@tools:sample/avatars" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/score"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@id/tv_title">
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardCornerRadius="9dp"
+        app:cardElevation="15dp"
+        app:layout_constraintTop_toTopOf="@id/cv_img_photo"
+        app:layout_constraintStart_toEndOf="@id/cv_img_photo"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="match_parent"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="8dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="@id/cv_img_photo"
+            app:layout_constraintStart_toEndOf="@id/cv_img_photo"
+            app:layout_constraintEnd_toEndOf="parent">
 
             <TextView
-                android:id="@+id/tv_sinopsis"
+                android:id="@+id/tv_userScore"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Sinopsis"
+                android:text="User Score"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/img_photo"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/tv_userScore_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="User Score Value"
                 android:textColor="@color/black"
                 android:textSize="18sp"
-                android:textStyle="bold"/>
-
-            <TextView
-                android:id="@+id/tv_sinopsis_desc"
-                android:layout_height="wrap_content"
-                android:layout_width="match_parent"
-                android:text="sinopsis"
-                android:textColor="@color/black"/>
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/tv_userScore"
+                app:layout_constraintStart_toEndOf="@id/img_photo"
+                app:layout_constraintEnd_toEndOf="parent"/>
 
         </LinearLayout>
 
-    </ScrollView>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/budget"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        app:cardCornerRadius="9dp"
+        app:cardElevation="15dp"
+        app:layout_constraintTop_toBottomOf="@id/score"
+        app:layout_constraintStart_toEndOf="@id/cv_img_photo"
+        app:layout_constraintEnd_toEndOf="@id/score">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="8dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/score"
+            app:layout_constraintStart_toEndOf="@id/cv_img_photo"
+            app:layout_constraintEnd_toEndOf="@id/score">
+
+            <TextView
+                android:id="@+id/tv_budget"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Budget"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@id/score"
+                app:layout_constraintStart_toEndOf="@id/cv_img_photo"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/tv_budget_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="budget value"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/budget"
+                app:layout_constraintStart_toEndOf="@id/cv_img_photo"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/revenue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        app:cardCornerRadius="9dp"
+        app:cardElevation="15dp"
+        app:layout_constraintTop_toBottomOf="@id/budget"
+        app:layout_constraintStart_toEndOf="@id/cv_img_photo"
+        app:layout_constraintEnd_toEndOf="@id/score">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="8dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/budget"
+            app:layout_constraintStart_toEndOf="@id/cv_img_photo"
+            app:layout_constraintEnd_toEndOf="@id/score">
+
+            <TextView
+                android:id="@+id/tv_revenue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Revenue"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@id/budget"
+                app:layout_constraintStart_toEndOf="@id/cv_img_photo"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/tv_revenue_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="revenue value"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/tv_revenue"
+                app:layout_constraintStart_toEndOf="@id/cv_img_photo"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/release"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        app:cardCornerRadius="9dp"
+        app:cardElevation="15dp"
+        app:layout_constraintTop_toBottomOf="@id/revenue"
+        app:layout_constraintStart_toEndOf="@id/cv_img_photo"
+        app:layout_constraintEnd_toEndOf="@id/score">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="8dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/revenue"
+            app:layout_constraintStart_toEndOf="@id/cv_img_photo"
+            app:layout_constraintEnd_toEndOf="@id/score">
+
+            <TextView
+                android:id="@+id/tv_release_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Release Date"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@id/revenue"
+                app:layout_constraintStart_toEndOf="@id/cv_img_photo"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="release date"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/tv_release_date"
+                app:layout_constraintStart_toEndOf="@id/cv_img_photo"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="-16dp"
+        app:cardCornerRadius="25dp"
+        app:cardElevation="25dp"
+        app:cardMaxElevation="50dp"
+        app:layout_constraintTop_toBottomOf="@id/cv_img_photo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/field_detail"
+            app:layout_constraintTop_toBottomOf="@id/cv_img_photo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginHorizontal="16dp"
+                android:text="title"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/tv_title">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_sinopsis"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sinopsis"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/tv_sinopsis_desc"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="8dp"
+                        android:text="sinopsis"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"/>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

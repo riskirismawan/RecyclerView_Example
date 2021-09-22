@@ -29,7 +29,6 @@ class ItemAdapter : RecyclerView.Adapter<ItemAdapter.ViewHolder>() {
 
             binding.title.text = item.title
             binding.date.text = "Release: ${item.releaseDate}"
-            binding.sinopsis.text = item.overview
 
             itemView.setOnClickListener {
                 val intent = Intent(itemView.context, DetailActivity::class.java)
